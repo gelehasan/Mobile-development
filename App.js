@@ -1,22 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Yes i can see the changes</Text>
-     
-
-      <View style={styles.blueContainer}>
-
-        <Text style={styles.buttonStyle}>Click this button</Text>
-      </View>
-
-      
-      <View style={styles.blueContainer}>
-
-        <Text style={styles.buttonStyle}>Click this button</Text>
-      </View>
+      <SafeAreaView style={styles.safeArea}>
+        <View style={styles.boxRed}></View>
+        <View style={styles.boxBlack}></View>
+        <View style={styles.boxRed}></View>
+      </SafeAreaView>
       <StatusBar style="auto" />
     </View>
   );
@@ -24,24 +16,24 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-   
-    alignItems: 'center',
-    justifyContent: 'center',
-   borderWidth:10,
-   borderColor:'red',
-   gap:10
+    flex: 1,
+    backgroundColor: 'white',
   },
-  blueContainer:{
-    backgroundColor:'black',
-    borderWidth:4,
-    padding:9,
-    borderRadius:10,
-    borderColor:'blue'
+  safeArea: {
+    flex: 1,
+    flexDirection: "column",
+    
   },
-  buttonStyle:{
-    fontSize:30,
-  color:'white',
-
-  }
+  boxRed: {
+    width: '100%',
+    height: 50,
+    backgroundColor: "red",
+    marginVertical: 10, 
+  },
+  boxBlack: {
+    width: 50,
+    height: 50,
+    backgroundColor: "black",
+    marginVertical: 10, 
+  },
 });
