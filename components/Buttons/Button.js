@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, SafeAreaView, StyleSheet, Switch, Text, View, Button } from 'react-native';
 
-export default function App() {
+export default function Button() {
   function alertUser (){
     console.log("Hello")
   }
